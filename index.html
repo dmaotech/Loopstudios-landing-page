@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+<body>
+  <header class="header-hero">
+    <nav class="header-hero--nav">
+      <a href="#"><img class="header-hero-logo" src="./images/logo.svg" alt="logo image"></a>
+      <img class="hamburguer-btn" src="./images/icon-hamburger.svg" alt="menu icon">
+    
+      <ul class="menu-desktop">
+        <li class="menu-desktop--item"><a href="#">About</a></li>
+        <li class="menu-desktop--item"><a href="#">Careers</a></li>
+        <li class="menu-desktop--item"><a href="#">Events</a></li>
+        <li class="menu-desktop--item"><a href="#">Products</a></li>
+        <li class="menu-desktop--item"><a href="#">Support</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="header-hero--title">Immersive experiences that deliver</h1>
+
+    <div class="menu hidden">
+      <header class="menu-header">
+        <img class="menu-header--logo" src="./images/logo.svg" alt="logo image">
+      </header>
+  
+      <ul class="menu-list">
+        <li class="menu-list--item"><a href="#">About</a></li>
+        <li class="menu-list--item"><a href="#">Careers</a></li>
+        <li class="menu-list--item"><a href="#">Events</a></li>
+        <li class="menu-list--item"><a href="#">Products</a></li>
+        <li class="menu-list--item"><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="intro-section">
+      <picture class="intro-section--picture">
+        <source media="(min-width: 650px)" srcset="./images/mobile/image-interactive.jpg">
+        <img src="./images/mobile/image-interactive.jpg" alt="a image of a person playing with vr headset">
+      </picture>
+
+      <div class="intro-info--container">
+        <h2 class="intro-info--title">The leader in interactive VR</h2>
+        <p>Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.</p>
+      </div>
+    </section>
+
+    <section class="grid-section">
+      <h2 class="grid-section--title">Our creations</h2>
+
+      <ul class="grid-section--list">
+        <li class="grid-list--item"><span><a href="#"><b>Deep earth</b></a></span></li>
+        <li class="grid-list--item"><span><a href="#"><b>Night arcade</b></a></span></li>
+        <li class="grid-list--item"><span><a href="#"><b>Soccer team VR</b></a></span></li>
+        <li class="grid-list--item"><span><a href="#"><b>The grid</b></a></span></li>
+        <li class="grid-list--item"><span><a href="#"><b>From up above VR</b></a></span></li>
+        <li class="grid-list--item"><span><a href="#"><b>Pocket borealis</b></a></span></li>
+        <li class="grid-list--item"><span><a href="#"><b>The curiosity</b></a></span></li>
+        <li class="grid-list--item"><span><a href="#"><b>Make it fisheye</b></a></span></li>
+      </ul>
+
+      <button class="grid-section--btn" type="button">See all</button>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <img class="footer-logo" src="./images/logo.svg" alt="logo image">
+
+    <ul class="footer-list">
+      <li class="footer-list--item"><a href="#">About</a></li>
+      <li class="footer-list--item"><a href="#">Careers</a></li>
+      <li class="footer-list--item"><a href="#">Events</a></li>
+      <li class="footer-list--item"><a href="#">Products</a></li>
+      <li class="footer-list--item"><a href="#">Support</a></li>
+    </ul>
+
+    <ul class="footer-social--list">
+      <li class="footer-social--item"><a href=""><img src="./images/icon-facebook.svg" alt="facebook icon"></a></li>
+      <li class="footer-social--item"><a href=""><img src="./images/icon-twitter.svg" alt="twitter icon"></a></li>
+      <li class="footer-social--item"><a href=""><img src="./images/icon-pinterest.svg" alt="pinteres icon"></a></li>
+      <li class="footer-social--item"><a href=""><img src="./images/icon-instagram.svg" alt="instagram icon"></a></li>
+    </ul>
+
+    <p class="copyright">© 2021 Loopstudios. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

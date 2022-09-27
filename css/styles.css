@@ -1,0 +1,522 @@
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Fonts */
+    --ff-primary: 'Alata', sans-serif;
+    --ff-secondary: 'Josefin Sans', sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-light);
+    text-transform: uppercase;
+}
+
+p {
+    font-family: var(--ff-primary);
+    font-size: 15px;
+    font-weight: var(--fw-regular);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Header */
+.header-hero {
+    min-height: 95vh;
+    padding: 1.5rem;
+    background-image: url("../images/mobile/image-hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-hero--nav {
+    margin-top: .75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-hero-logo {
+    width: 80%;
+}
+
+.header-hero--title {
+    margin: 10rem auto;
+    font-size: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    line-height: 2.5rem;
+    color: var(--white);
+    border: 3px solid var(--white);
+}
+
+/* Mobile Menu */
+.menu {
+    display: block;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    padding: 2.5rem 1.75rem;
+    background-color: var(--black);
+    opacity: 0;
+    z-index: 500;
+    transition: .5s;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-header--logo {
+    width: 47.5%;
+}
+
+.menu-list {
+    margin-top: 8rem;
+}
+
+.menu-list--item a {
+    display: inline-block;
+    margin-block: .75rem;
+    font-size: 1.5rem;
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.visible {
+    opacity: 1;
+}
+
+.hamburguer-btn {
+    z-index: 1000;
+}
+
+/* Main */
+.main-container {
+    padding: 1.5rem;
+}
+
+/* Intro */
+.intro-section {
+    margin-block: 4.5rem;
+    text-align: center;
+}
+
+.intro-info--title {
+    margin-block: 2.75rem 1rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.intro-info--container p {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.6rem;
+    color: var(--dark-gray);
+}
+
+/* Grid Section */
+.grid-section--title {
+    margin-block: 3rem;
+    font-family: var(--ff-secondary);
+    font-size: 2rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.grid-section--list {
+    min-width: 100%;
+    margin: 0;
+}
+
+.grid-list--item {
+    margin-block: 1.5rem;
+    min-height: 125px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.grid-list--item:nth-child(1) {
+    background-image: url("../images/mobile/image-deep-earth.jpg");
+}
+
+.grid-list--item:nth-child(2) {
+    background-image: url("../images/mobile/image-night-arcade.jpg");
+}
+
+.grid-list--item:nth-child(3) {
+    background-image: url("../images/mobile/image-soccer-team.jpg");
+}
+
+.grid-list--item:nth-child(4) {
+    background-image: url("../images/mobile/image-grid.jpg");
+}
+
+.grid-list--item:nth-child(5) {
+    background-image: url("../images/mobile/image-from-above.jpg");
+}
+
+.grid-list--item:nth-child(6) {
+    background-image: url("../images/mobile/image-pocket-borealis.jpg");
+}
+
+.grid-list--item:nth-child(7) {
+    background-image: url("../images/mobile/image-curiosity.jpg");
+}
+
+.grid-list--item:nth-child(8) {
+    background-image: url("../images/mobile/image-fisheye.jpg");
+}
+
+.grid-list--item span {
+    display: block;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,.5) 20%, rgba(0,0,0,0) 80%);
+}
+
+.grid-list--item a {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    color: var(--white);
+}
+
+.grid-list--item a b {
+    display: inline-block;
+    padding: 3.5rem 0 1.25rem 1rem;
+    max-width: 45%;
+    font-size: 1.5rem;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-light);
+    text-transform: uppercase;
+}
+
+.grid-list--item:nth-child(4) a b {
+    max-width: 30%;
+}
+
+.grid-section--btn {
+    display: block;
+    width: 50%;
+    margin: 2.25rem auto 3.5rem auto;
+    font-family: var(--ff-primary);
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    padding: .65rem 1.15rem;
+    border: 1.75px solid var(--black);
+    background-color: var(--white);
+}
+
+/* Footer */
+.footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.footer-logo {
+    width: 45%;
+    margin-block: 1.25rem;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.footer-list--item a {
+    font-size: .95rem;
+    font-family: var(--ff-primary);
+    color: var(--white);
+}
+
+.footer-social--list {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.copyright {
+    color: var(--very-dark-gray);
+}
+
+@media (min-width: 920px) {
+    .header-hero, .main-container, .footer {
+        padding: 3rem 12%;
+    }
+
+    /* Header */
+    .header-hero {
+        min-height: 85vh;
+        background-image: url("../images/desktop/image-hero.jpg");
+        background-color: #0005;
+        background-blend-mode: saturation;
+    }
+    
+    .header-hero-logo {
+        width: 100%;
+    }
+
+    .menu-desktop {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .menu-desktop--item a {
+        font-family: var(--ff-primary);
+        color: var(--white);
+    }
+
+    .menu-desktop--item a:hover {
+        border-bottom: 3px solid var(--white);
+        transition: .3s;
+    }
+
+    .header-hero--title {
+        width: 58%;
+        max-width: fit-content;
+        margin: 10rem 0 8rem 0;
+        padding: 2.5rem 2.5rem;
+        font-size: 4.5vw;
+        line-height: inherit;
+    }
+
+    /* Intro */
+    .intro-section {
+        display: flex;
+        position: relative;
+        margin-block: 8rem;
+    }
+
+    .intro-section--picture {
+        min-width: 62.5%;
+    }
+
+    .intro-section--picture img {
+        min-width: 100%;
+    }
+
+    .intro-info--container {
+        max-width: 51%;
+        padding: 8.25%;
+        padding-bottom: 0;
+        position: absolute;
+        top: 37%;
+        right: 0%;
+        text-align: start;
+        background-color: var(--white);
+    }
+
+    .intro-info--title {
+        margin-block: 0 2rem;
+        font-size: 3.05vw;
+    }
+
+    .intro-info--container p {
+        width: 100%;
+    }
+
+    /* Grid section  */
+    .grid-section {
+        margin-block: 12rem;
+        display: grid;
+        grid-template-areas: 
+        "title btn"
+        "list list";
+    }
+
+    .grid-section--title {
+        grid-area: title;
+        justify-self: start;
+        font-size: 3rem;
+    }
+
+    .grid-section--list {
+        margin-block: 2rem;
+        grid-area: list;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 500px);
+        gap: 2rem;
+    }
+    
+    .grid-list--item {
+        margin-block: 0;
+        min-height: 0;
+        position: relative;
+    }
+
+    .grid-list--item:hover {
+        transition: .3s;
+        background-color: #fffa;
+        background-blend-mode: lighten;
+    }
+    
+    .grid-list--item:nth-child(1) {
+        background-image: url("../images/desktop/image-deep-earth.jpg");
+    }
+    
+    .grid-list--item:nth-child(2) {
+        background-image: url("../images/desktop/image-night-arcade.jpg");
+    }
+    
+    .grid-list--item:nth-child(3) {
+        background-image: url("../images/desktop/image-soccer-team.jpg");
+    }
+    
+    .grid-list--item:nth-child(4) {
+        background-image: url("../images/desktop/image-grid.jpg");
+    }
+    
+    .grid-list--item:nth-child(5) {
+        background-image: url("../images/desktop/image-from-above.jpg");
+    }
+    
+    .grid-list--item:nth-child(6) {
+        background-image: url("../images/desktop/image-pocket-borealis.jpg");
+    }
+    
+    .grid-list--item:nth-child(7) {
+        background-image: url("../images/desktop/image-curiosity.jpg");
+    }
+    
+    .grid-list--item:nth-child(8) {
+        background-image: url("../images/desktop/image-fisheye.jpg");
+    }
+
+    .grid-list--item span {
+        width: fit-content;
+        background: linear-gradient(0deg, rgba(0,0,0,.5) 20%, rgba(0,0,0,0) 60%);
+    }
+
+    .grid-list--item a:hover {
+        color: var(--black);
+    }
+    
+    .grid-list--item a b {
+        max-width: 60%;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-size: 1.75vw;
+    }
+
+    .grid-list--item:nth-child(4) a b {
+        max-width: 50%;
+    }
+
+    .grid-section--btn {
+        max-width: 40%;
+        margin-inline: 0;
+        padding: .65rem 1rem;
+        border: 2px solid var(--black);
+        grid-area: btn;
+        justify-self: end;
+        transition: .4s;
+    }
+
+    .grid-section--btn:hover {
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    /* Footer */
+    .footer {
+        display: grid;
+        grid-template-areas: 
+        "logo social"
+        "list copyright";
+        padding-block: 1rem;
+    }
+
+    .footer-logo {
+        width: 30%;
+        grid-area: logo;
+        justify-self: start;
+    }
+
+    .footer-list {
+        flex-direction: row;
+        grid-area: list;
+        justify-self: start;
+    }
+
+    .footer-social--list {
+        margin: 0;
+        grid-area: social;
+        justify-self: end;
+        cursor: pointer;
+    }
+
+    .footer-social--list a {
+        display: inline-block;
+        padding: .25rem;
+    }
+    
+    .footer-social--list a:hover,
+    .footer-list a:hover {
+        border-bottom: 3px solid var(--white);
+        transition: .3s;
+    }
+
+    .copyright {
+        grid-area: copyright;
+        justify-self: end;
+    }
+}
